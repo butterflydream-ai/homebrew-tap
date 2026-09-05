@@ -18,7 +18,13 @@ cask "coco" do
   depends_on arch: :arm64
 
   app "Coco.app"
-  binary "#{appdir}/Coco.app/Contents/Helpers/coco"
+
+  # NOTE: a future release will embed a `coco` CLI at
+  # Contents/Helpers/coco (see Sources/CocoCLI in the source repo). Once a
+  # tagged release actually ships that binary, uncomment the following line
+  # — `brew install` fails hard if the symlink target does not exist in the
+  # installed bundle, which is why it is not enabled yet for 1.23.0.
+  # binary "#{appdir}/Coco.app/Contents/Helpers/coco"
 
   zap trash: [
     "~/.coco",
