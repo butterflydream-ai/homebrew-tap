@@ -5,7 +5,7 @@ cask "coco" do
   url "https://raw.githubusercontent.com/butterflydream-ai/Coco/sparkle-v1.23.0-b1788459706/Coco-#{version}-macos.dmg",
       verified: "raw.githubusercontent.com/butterflydream-ai/Coco/"
   name "Coco"
-  desc "Keyboard-driven macOS launcher with clipboard history and plugins"
+  desc "Keyboard-driven launcher with clipboard history and plugins"
   homepage "https://coco.butterflydream.ai/"
 
   livecheck do
@@ -14,16 +14,16 @@ cask "coco" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "Coco.app"
   binary "#{appdir}/Coco.app/Contents/Helpers/coco"
 
   zap trash: [
+    "~/.coco",
     "~/Library/Application Support/Coco",
     "~/Library/Caches/Coco",
     "~/Library/Preferences/ai.butterflydream.coco.plist",
-    "~/.coco",
   ]
 end
