@@ -1,8 +1,8 @@
 cask "coco" do
-  version "1.26.7"
-  sha256 "aa0558c6a55936be90af62ccf776fcd175cbf6bfaabd52ab7e176ecf462ee635"
+  version "1.27.0"
+  sha256 "0237630f08383cb0541e369d797524c4137408deb2758e10eb30a766fb0f40c6"
 
-  url "https://raw.githubusercontent.com/butterflydream-ai/Coco/sparkle-v1.26.7-b1789580698/Coco-#{version}-macos.dmg",
+  url "https://raw.githubusercontent.com/butterflydream-ai/Coco/sparkle-v1.27.0-b1795369352/Coco-#{version}-macos.dmg",
       verified: "raw.githubusercontent.com/butterflydream-ai/Coco/"
   name "Coco"
   desc "Keyboard-driven launcher with clipboard history and plugins"
